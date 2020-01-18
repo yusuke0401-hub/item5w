@@ -1,0 +1,35 @@
+<div class="fav">
+  <div class="inner">
+    <div class="fav-item">
+      
+      <p class="txtl">お気に入り番号 <%= @item.id %></p>
+      <p class="fav-item-name txtl">
+      <% @fav_users.each do |user| %>
+      <%= link_to user.name, user_path(user) %>
+      <% end %>
+      </p>
+      
+      <div class ="fav-item-img item-img">
+        <img src="<%= @item.image_url %>">
+      </div>
+      
+      <div class="detail">
+        <div class="inner">
+          
+          <div class="detail-item what-item">
+            <p class="detail-item-tag">What</p>
+            <div class="detail-item-contents what-item-contents">
+              <%= link_to @item.name, @item.url %>
+            </div>
+          </div>
+          <div class="form-btn">
+            <%= link_to "4w新規作成", new_detail_path, class: "btn-5w"  %>
+          </div>
+          <%= render 'details/details', details: @details %>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>

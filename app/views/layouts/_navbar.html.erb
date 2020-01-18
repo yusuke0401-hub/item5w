@@ -1,0 +1,52 @@
+<header id="header">
+
+  <!-- inner -->
+  <div class="inner">
+
+    <!-- header-logo -->
+    <div class="header-logo">
+      <%= link_to "5w", root_url ,class: "header-ttl txtl" %>
+      <p class="header-sub txts">あなたに合った商品を</p>
+    </div><!-- /header-logo -->
+    
+    
+     <div class="drawer">
+        <div class="drawer-icon">
+          <span class="drawer-open"><span class="drawer-icon-parts"></span></span><!-- /drawer-open -->
+          <span class="drawer-close"><span class="drawer-icon-parts"></span></span><!-- drawer-close -->
+        </div><!-- /drawer-icon -->
+        
+        <nav class="drawer-nav">
+          <ul class="drawer-list">
+            <% if logged_in? %>
+            <li class="menu-item txts"><%= link_to "アイテムを見る", new_item_path %></li>
+            <li class="menu-item txts"><%= link_to "4w新規作成", new_detail_path(@item) %></li>
+            <li class="menu-item txts"><%= link_to 'お気に入り', user_path(current_user) %></li>
+            <li class="menu-item txts"><%= link_to 'マイページ', user_path(current_user) %></li>
+            <li class="menu-item txts"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+            <% else %>
+            <li class="menu-item txts"><%= link_to '新規登録', signup_path %></li>
+            <li class="menu-item txts"><%= link_to 'ログイン',login_path %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </div><!-- /drawer -->
+
+      <!-- global-nav -->
+       <nav class="global-nav">
+          <ul class="global-list">
+            <% if logged_in? %>
+            <li class="menu-item txts"><%= link_to "アイテムを見る", new_item_path %></li>
+            <li class="menu-item txts"><%= link_to "4w新規作成", new_detail_path(@item) %></li>
+            <li class="menu-item txts"><%= link_to 'お気に入り', user_path(current_user) %></li>
+            <li class="menu-item txts"><%= link_to 'マイページ' , user_path(current_user) %></li>
+            <li class="menu-item txts"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
+            <% else %>
+            <li class="menu-item txtm"><%= link_to '新規登録', signup_path %></li>
+            <li class="menu-item txtm"><%= link_to 'ログイン',login_path %></li>
+            <% end %>
+          </ul>
+       </nav><!-- /global-nav -->
+    
+    </div><!-- /inner -->
+</header>

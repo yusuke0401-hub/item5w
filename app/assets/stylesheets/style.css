@@ -1,0 +1,856 @@
+@charset "UTF-8";
+/* =====================================
+    1. リセットCSS
+    2. mixin
+    3. 独自基本設定CSS
+    4. ライブラリ用CSS
+    5. 基本設定
+    6. コンテンツスタイル
+===================================== */
+/* 1. リセットCSS
+===================================== */
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* 2. mixin
+===================================== */
+/*  clearfix
+===================================== */
+/* 3. 独自基本設定CSS
+===================================== */
+/*  colors
+===================================== */
+/*  font-family
+===================================== */
+/*  font-size
+===================================== */
+@media (max-width: 480px) {
+  .txts {
+    font-weight: 400 !important;
+    font-size: 12px !important;
+  }
+  .txtm {
+    font-weight: 400 !important;
+    font-size: 14px !important;
+  }
+  .txtl {
+    font-weight: 700 !important;
+    font-size: 24px !important;
+  }
+}
+
+.txts {
+  font-weight: 400 !important;
+  font-size: 16px !important;
+}
+
+.txtm {
+  font-weight: 400 !important;
+  font-size: 18px !important;
+}
+
+.txtl {
+  font-weight: 700 !important;
+  font-size: 30px !important;
+}
+
+/*  text-align
+===================================== */
+.txt-center {
+  text-align: center;
+}
+
+/*  改行
+===================================== */
+.brsp {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .brsp {
+    display: block;
+  }
+}
+
+/*  表示、非表示 
+===================================== */
+.onlysp {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .brsp {
+    display: block;
+  }
+}
+
+.onlypc {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .brpc {
+    display: block;
+  }
+}
+
+/* 4. ライブラリ用CSS
+===================================== */
+/* 5. 基本設定
+===================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /*
+        ブラウザの標準フォントサイズは基本16pxなので
+        16pxの62.5%は10pxになる為、font-sizeをremで指定しやすくなる。
+        （1.2rem = 12px）
+        px指定にしてしまうとブラウザ側の設定でフォントサイズ拡大しても効かなくなるので
+        ユーザビリティ的にあまりよろしくない。
+     */
+  font-size: 62.5%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "Droid Sans", sans-serif;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-color: rgba(255, 228, 196, 0.7);
+}
+
+a {
+  text-decoration: unset;
+}
+
+li {
+  list-style: none;
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* 6. コンテンツスタイル
+===================================== */
+/* header
+---------------------------- */
+#header {
+  background-color: #ffe4c4;
+}
+
+#header > .inner {
+  padding: 10px 10px 20px 10px;
+  border-bottom: 1px solid #000;
+}
+
+.header-logo {
+  display: inline-block;
+}
+
+.drawer {
+  display: none;
+}
+
+.drawer-icon {
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 41;
+}
+
+.drawer-open {
+  display: block;
+}
+
+.m_checked .drawer-open {
+  display: none;
+}
+
+.drawer-close {
+  display: none;
+}
+
+.m_checked .drawer-close {
+  display: block;
+}
+
+.drawer-nav li {
+  border-bottom: 1px solid #000;
+}
+
+.drawer-nav li:last-child {
+  border-bottom: none;
+}
+
+.drawer-nav li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.drawer-nav li a {
+  display: block;
+  color: #000;
+  border-left: 6px solid transparent;
+  display: block;
+  padding: 20px 12px 12px 0;
+  text-decoration: none;
+}
+
+.drawer-icon-parts, .drawer-icon-parts:before, .drawer-icon-parts:after {
+  background-color: #000;
+  display: block;
+  width: 26px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.drawer-icon-parts:before, .drawer-icon-parts:after {
+  content: " ";
+}
+
+.drawer-icon-parts:before {
+  top: 16px;
+}
+
+.drawer-icon-parts:after {
+  top: -16px;
+}
+
+.m_checked .drawer-icon-parts {
+  background: transparent;
+}
+
+.m_checked .drawer-icon-parts:before {
+  background-color: #000;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.m_checked .drawer-icon-parts:after {
+  background-color: #000;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (max-width: 680px) {
+  .drawer {
+    display: block;
+  }
+}
+
+.global-nav {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.global-list {
+  display: flex;
+  justify-content: center;
+}
+
+.global-list .menu-item {
+  position: relative;
+}
+
+.global-list .menu-item + .menu-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  border-left: 1px solid #6e87bf;
+}
+
+.global-list .menu-item a {
+  display: block;
+  padding: 0 14px;
+  color: #000;
+}
+
+@media (max-width: 680px) {
+  #header > .inner {
+    padding: 10px;
+  }
+  .global-nav {
+    display: none;
+  }
+}
+
+/* /header
+---------------------------- */
+/* main
+---------------------------- */
+#main {
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* /main
+---------------------------- */
+/* signup-top
+---------------------------- */
+.signup-ttl {
+  font-size: 6rem;
+  margin: 100px;
+}
+
+.form-btn {
+  margin: 10px auto;
+}
+
+/* btn
+---------------------------- */
+.btn-5w {
+  display: inline-block;
+  padding: 10px 40px;
+  font-size: 2rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn-5w:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.fav-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.detail-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.detail-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.img-btn {
+  margin: 10px;
+}
+
+/* /btn
+---------------------------- */
+@media (max-width: 680px) {
+  .signup-ttl {
+    font-size: 3rem;
+    margin: 50px;
+  }
+}
+
+/* signup-top
+---------------------------- */
+/* main-form
+---------------------------- */
+.main-form > .inner {
+  padding: 40px 10px;
+}
+
+.form-sub-ttl {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.main-form form {
+  width: 600px;
+  margin: 10px auto;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.form-item {
+  padding: 5px;
+}
+
+.form-item input {
+  display: inline-block;
+  padding: 10px 40px;
+  font-size: 2rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.form-item input:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.form-item input[type="text"],
+.form-item input[type="password"] {
+  width: 100%;
+  padding: 10px;
+}
+
+.form-item textarea {
+  width: 100px;
+}
+
+.form-item input[type="submit"] {
+  margin: 20px 0;
+}
+
+.form-item input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.form-item .form-item-id {
+  width: 50px !important;
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .main-form > .inner {
+    padding: 20px 10px;
+  }
+  .main-form form {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
+/* /main-form
+---------------------------- */
+/* item-search-form
+---------------------------- */
+.item-search-form {
+  text-align: center;
+}
+
+.item-search-form .form-item {
+  padding: 50px;
+}
+
+.item-search-form .form-item input[type="submit"] {
+  margin: 50px 0;
+}
+
+/* /item-search-form
+---------------------------- */
+/* edit-detail-form
+---------------------------- */
+/* /edit-detail-form
+---------------------------- */
+/* 4w-form
+---------------------------- */
+/* /4w-form
+---------------------------- */
+/* search-result
+---------------------------- */
+.search-result > .inner {
+  padding: 0 10px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: calc(33.3333333% - 60px / 3);
+  margin: 0 30px 30px 0;
+  padding: 10px 10px;
+}
+
+.item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.item-top {
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #000;
+}
+
+.item-top-ttl {
+  margin: 10px 0;
+}
+
+.item-btn {
+  border-radius: 0 0 5px 5px;
+  border: 1px solid #000;
+}
+
+.item-name {
+  margin-top: 10px;
+}
+
+.search-result-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 680px) {
+  .item {
+    width: calc(50% - 30px / 2);
+  }
+  .item:nth-child(3n) {
+    margin-right: 30px;
+  }
+  .item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    width: 100%;
+  }
+  .item:nth-child(n) {
+    margin-right: 0;
+  }
+}
+
+/* /search-result
+---------------------------- */
+/* fav-item
+---------------------------- */
+.fav-item {
+  width: 800px;
+  margin: 10px auto;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgba(255, 228, 196, 0.5);
+}
+
+.fav > .inner {
+  padding: 10px;
+}
+
+.item-img img {
+  height: 100%;
+  max-width: 100%;
+  height: 150px;
+  margin: 20px 0;
+}
+
+.detail-item {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.detail-4w {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgba(255, 228, 196, 0.8);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+}
+
+.what-item {
+  padding: 0 10px;
+}
+
+.detail-item-tag {
+  width: 20%;
+  font-size: 3rem;
+}
+
+.detail-item-ttl {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.detail-item-contents {
+  display: flex;
+  width: 80%;
+}
+
+.detail-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 680px) {
+  .fav-item {
+    width: 100%;
+  }
+  .detail-4w {
+    width: 100%;
+  }
+  .detail-item {
+    flex-direction: column;
+  }
+  .detail-item-tag {
+    width: 100%;
+    font-size: 2rem;
+  }
+  .detail-item-contents {
+    width: 100%;
+  }
+  .detail-btns {
+    display: block;
+  }
+}
+
+/* /fav-item
+---------------------------- */
+/* user
+---------------------------- */
+.user-name {
+  margin: 10px 0;
+}
+
+/* /user
+---------------------------- */
+/* footer
+---------------------------- */
+#footer {
+  margin-top: auto;
+  background-color: #ffe4c4;
+  text-align: center;
+}
+
+#footer > .inner {
+  padding: 20px 10px;
+  display: flex;
+  flex-flow: column;
+  min-height: 10vh;
+}
+
+#footer-nav {
+  width: 100%;
+}
+
+#footer-nav > .inner {
+  padding: 20px;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-list .menu-item {
+  position: relative;
+}
+
+.footer-list .menu-item + .menu-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  border-left: 1px solid #6e87bf;
+}
+
+.footer-list .menu-item a {
+  display: block;
+  padding: 0 14px;
+  color: #000;
+}
+
+@media (max-width: 480px) {
+  .footer-list {
+    flex-direction: column;
+  }
+  .footer-list .menu-item + .menu-item a::before {
+    border-left: none;
+  }
+}
+
+/* /footer
+---------------------------- */
+/* alert
+---------------------------- */
+.alert {
+  color: #ff0000;
+  margin: 10px 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* /alert
+---------------------------- */
+/* bootstrap
+---------------------------- */
+a:hover {
+  color: unset !important;
+  text-decoration: none !important;
+}
+
+.input-group {
+  display: block !important;
+}
+
+.form-control {
+  height: 100% !important;
+}
+
+.input-group > .form-control:not(:first-child),
+.input-group > .custom-select:not(:last-child) {
+  border-top-left-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+/* /bootstrap
+---------------------------- */
+/* pagination
+---------------------------- */
+.pagination {
+  justify-content: center;
+  margin: 10px auto;
+  font-size: 1.5rem;
+}
+
+/* /pagination
+---------------------------- */

@@ -1,0 +1,26 @@
+<div class="signup">
+  
+  <!-- inner -->
+  <div class="inner">
+    <h1 class="signup-ttl">Item5wへ<br class="brsp">ようこそ</h1>
+    
+    <% unless logged_in? %>
+    
+    <div class="signup-btn">
+      <%= link_to 'Sign up now!',signup_path, class: 'btn-5w' %>
+    </div>
+    
+    <% else %>
+    
+    <div>
+      <%= render 'items/items', items: @items %>
+    </div>
+    
+      <%= paginate @items %>
+    
+    <% end %>
+    
+  </div><!-- /inner -->
+
+</div>
+

@@ -1,0 +1,29 @@
+<div class="login main-form">
+
+  <!-- inner -->
+  <div class="inner">
+    <h1 class="form-sub-ttl">ログイン</h1>
+
+  <%= form_for(:session, url: login_path) do |f| %>
+
+      <div class="form-item">
+        <%= f.text_field :email, :placeholder => "email" %>
+      </div>
+
+      <div class="form-item">
+        <%= f.text_field :password, :placeholder => "password" %>
+      </div>
+
+      <div class="form-item">
+        <%= f.password_field :password_confirmation, :placeholder => "password confirmation" %>
+      </div>
+
+      <div class="form-btn">
+        <%= f.submit 'ログイン',class: "btn-5w" %>
+      </div>
+    
+    <% end %>
+    
+  </div><!-- /inner -->
+
+</div>

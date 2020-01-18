@@ -1,0 +1,13 @@
+class CreateDetails < ActiveRecord::Migration[5.0]
+  def change
+    create_table :details do |t|
+      t.string :purchase_date
+      t.string :place
+      t.string :person
+      t.string :reason
+      
+      t.references :item, foreign_key: true
+      t.timestamps
+    end
+  end
+end

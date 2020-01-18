@@ -1,0 +1,15 @@
+<div class="item-search-form">
+  
+  <div class ="inner">
+    <div class="form-item">
+    <%= form_tag(new_item_path, method: :get) do %>
+    <h1 class ="txtl">What</h1>
+    <p class ="txtm">何が欲しいですか？</p>
+    <%= text_field_tag :keyword, @keyword ,placeholder: "検索" %>
+    <%= submit_tag '商品を検索' %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<%= render 'items', items: @items %>

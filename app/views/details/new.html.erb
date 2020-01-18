@@ -1,0 +1,54 @@
+<div class="detail-form main-form">
+  
+  <!-- inner -->
+  <div class="inner">
+    
+    <% unless @detail === nil %> 
+    
+    <h1 class="form-sub-ttl">4w新規作成</h1>
+    
+    <%= form_for(@detail) do |f| %>
+    
+    
+    <div class="form-item">
+      <%= label :id, 'お気に入り番号', class: "txtm" %>
+      <%= text_field_tag :id,'', class: 'form-item-id' %>
+    </div>
+    
+    
+    <div class="form-item input-group" data-target-input="nearest">
+      <%= f.label :purchase_date, 'When', class: "txtm" %>
+      <%= f.text_field :purchase_date, id: "purchase_date", class: "form-control datepicker", data: { target: '#purchase_date'} ,:placeholder => "purchase_date" %>
+      <div class="input-group-append" data-target="#purchase_date" data-toggle="datetimepicker">
+          <div class="input-group-text"><i class="fa fa-calendar"> カレンダー</i></div>
+      </div>
+    </div>
+    
+
+      <div class="form-item">
+        <%= f.label :place, 'Where', class: "txtm" %>
+        <%= f.text_field :place, :placeholder => "place" %>
+      </div>
+
+      <div class="form-item">
+        <%= f.label :person, 'Who', class: "txtm" %>
+        <%= f.text_field :person, :placeholder => "person" %>
+      </div>
+
+      <div class="form-item">
+        <%= f.label :reason, 'Why', class: "txtm" %>
+        <%= f.text_field :reason, :placeholder => "reason" %>
+      </div>
+
+      <div class="form-btn">
+        <%= f.submit '完了',class: "btn-5w" %>
+      </div>
+      
+  </div>
+  <% end %>
+  <% end %>
+  
+  
+  
+  
+</div>

@@ -1,0 +1,43 @@
+<div class="edit-detail-form main-form">
+  
+  <!-- inner -->
+  <div class="inner">
+    <h1 class="form-sub-ttl">4wの編集</h1>
+    
+    <%= form_for(@detail) do |f| %>
+
+    <div class="form-item">
+      <%= f.label :id, '詳細番号', class: "txtm" %>
+      <p class="txtm"><%= @detail.id %></p> 
+      <%= f.hidden_field :id %>
+      <%= f.hidden_field :item_id %>
+    </div>
+  
+    <div class="form-item">
+      <%= f.label :purchase_date, 'When', class: "txtm" %>
+      <%= f.text_field :purchase_date,  :placeholder => "purchase_date" %>
+    </div>
+
+    <div class="form-item">
+      <%= f.label :place, 'Where', class: "txtm" %>
+      <%= f.text_field :place, :placeholder => "place" %>
+    </div>
+
+    <div class="form-item">
+      <%= f.label :person, 'Who', class: "txtm" %>
+      <%= f.text_field :person, :placeholder => "person" %>
+    </div>
+
+    <div class="form-item">
+      <%= f.label :reason, 'Why', class: "txtm" %>
+      <%= f.text_field :reason, :placeholder => "reason" %>
+    </div>
+
+    <div class="form-btn">
+      <%= f.submit '完了',class: "btn-5w" %>
+    </div>
+      
+  </div>
+  <% end %>
+  
+</div>
