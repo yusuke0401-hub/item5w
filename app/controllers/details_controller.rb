@@ -9,7 +9,7 @@ class DetailsController < ApplicationController
       
     if detail_create
       flash[:success] = "4wを登録しました。"
-      redirect_to root_url 
+      redirect_to item_path(@detail.item_id)
     else
       flash.now[:danger] = "4wの登録に失敗しました。"
       render 'new'

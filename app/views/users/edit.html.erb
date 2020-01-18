@@ -8,7 +8,7 @@
       
   <div class="img">
    <% if @user.image? %>
-      <%= image_tag @user.image.url(:thub) %>
+      <%= image_tag @user.image.url(:thumb) %>
    <% else %>
       <%= image_tag "no_image.jpg", :size => '100x100' %>
    <% end %>

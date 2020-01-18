@@ -4,30 +4,43 @@
 <div class="detail-4w">
   <p class="detail-item-ttl txtm">詳細番号 <%= detail.id %></p>
   
+  <% unless detail.purchase_date.empty? %>
   <div class="detail-item when-item">
     <p class="detail-item-tag">When</p>
     <div class="detail-item-contents when-item-contents txtm">
       <%= detail.purchase_date %>                  
     </div>
   </div>
+  <% end %>
+  
+  <% unless detail.place.empty? %>
   <div class="detail-item where-item">
     <p class="detail-item-tag">Where</p>
     <div class="detail-item-contents where-item-contents txtm">
       <%= detail.place %>                  
     </div>
   </div>
+  <% end %>
+  
+  
+  <% unless detail.person.empty? %>
   <div class="detail-item who-item">
     <p class="detail-item-tag">Who</p>
     <div class="detail-item-contents who-item-contents txtm">
       <%= detail.person %>                    
     </div>
   </div>
+  <% end %>
+  
+  
+  <% unless detail.reason.empty? %>  
   <div class="detail-item why-item">
     <p class="detail-item-tag">Why</p>
     <div class="detail-item-contents why-item-contents txtm">
       <%= detail.reason %>
     </div>
   </div>  
+  <% end %>
   
   <div class="detail-btns">
     <div class="form-btn">

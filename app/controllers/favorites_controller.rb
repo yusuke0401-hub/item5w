@@ -10,14 +10,14 @@ class FavoritesController < ApplicationController
     @item.save
   end
     current_user.like(@item)
-    flash[:success] = '商品を Like しました。'
+    flash[:success] = 'お気に入りしました。'
     redirect_back(fallback_location: root_path)
   end
   
   def destroy
     @item = Item.find(params[:item_id])
     current_user.unlike(@item)
-    flash[:success] = '商品の Like を解除しました。'
+    flash[:success] = 'お気に入りを解除しました。'
     redirect_back(fallback_location: root_path)
   end
 end
