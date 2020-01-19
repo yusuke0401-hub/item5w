@@ -70,3 +70,5 @@ gem 'bootstrap4-datetime-picker-rails'
 gem 'carrierwave'
 
 gem 'mini_magick'
+
+gem 'rails-i18n'

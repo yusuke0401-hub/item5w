@@ -419,6 +419,11 @@ li {
   margin: 100px;
 }
 
+.signup-txt {
+  margin-bottom: 100px;
+  line-height: 2;
+}
+
 .form-btn {
   margin: 10px auto;
 }

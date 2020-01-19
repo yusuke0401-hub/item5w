@@ -3,12 +3,6 @@
     <div class="fav-item">
       
       <p class="txtl">お気に入り番号 <%= @item.id %></p>
-      <p class="fav-item-name txtl">
-      <% @fav_users.each do |user| %>
-      <%= link_to user.name, user_path(user) %>
-      <% end %>
-      </p>
-      
       <div class ="fav-item-img item-img">
         <img src="<%= @item.image_url %>">
       </div>
@@ -30,6 +24,7 @@
       </div>
       
     </div>
+    
     
   </div>
 </div>
