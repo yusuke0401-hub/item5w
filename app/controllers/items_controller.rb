@@ -3,7 +3,6 @@ class ItemsController < ApplicationController
   
   def new
     @items = []
-    
     @keyword = params[:keyword]
     if @keyword.present?
       results = RakutenWebService::Ichiba::Item.search({
@@ -20,13 +19,11 @@ class ItemsController < ApplicationController
   end
   
   def show
-    
     @item = Item.find(params[:id])
     @fav_users = @item.fav_users
-      
     @details = @item.details
-  
   end
+  
 end
 
 

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   get 'signup', to: 'users#new'
+  
   resources :users, only: [:show, :new, :create, :edit, :update]
   
   resources :items, only: [:show, :new]
@@ -13,6 +14,4 @@ Rails.application.routes.draw do
   resources :favorites, only: [:create, :destroy]
   
   resources :details, only: [ :new, :create, :edit, :update, :destroy]
-  
-  
 end

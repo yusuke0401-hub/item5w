@@ -1,15 +1,12 @@
 <div class="fav">
   <div class="inner">
     <div class="fav-item">
-      
       <p class="txtl">お気に入り番号 <%= @item.id %></p>
       <div class ="fav-item-img item-img">
         <img src="<%= @item.image_url %>">
       </div>
-      
       <div class="detail">
         <div class="inner">
-          
           <div class="detail-item what-item">
             <p class="detail-item-tag">What</p>
             <div class="detail-item-contents what-item-contents">
@@ -22,9 +19,6 @@
           <%= render 'details/details', details: @details %>
         </div>
       </div>
-      
     </div>
-    
-    
   </div>
 </div>

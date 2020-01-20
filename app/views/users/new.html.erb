@@ -1,36 +1,23 @@
 <div class="signup main-form">
-
-  <!-- inner -->
   <div class="inner">
     <h1 class="form-sub-ttl">アカウント登録</h1>
-
-  <%= form_for(@user) do |f| %>
-  
-      <%= render 'layouts/error_messages', model: f.object %>
-      
-      <div class="form-item">
-        <%= f.text_field :name, :placeholder => "name" %>
-      </div>
-
-
-      <div class="form-item">
-        <%= f.text_field :email, :placeholder => "email" %>
-      </div>
-
-      <div class="form-item">
-        <%= f.text_field :password, :placeholder => "password（※ 6字以上）" %>
-      </div>
-
-      <div class="form-item">
-        <%= f.password_field :password_confirmation, :placeholder => "password confirmation" %>
-      </div>
-
-      <div class="form-btn">
-        <%= f.submit 'アカウント登録', class: "btn-5w" %>
-      </div>
-    
+    <%= form_for(@user) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+    <div class="form-item">
+      <%= f.text_field :name, :placeholder => "name" %>
+    </div>
+    <div class="form-item">
+      <%= f.text_field :email, :placeholder => "email" %>
+    </div>
+    <div class="form-item">
+      <%= f.text_field :password, :placeholder => "password（※ 6字以上）" %>
+    </div>
+    <div class="form-item">
+      <%= f.password_field :password_confirmation, :placeholder => "password confirmation" %>
+    </div>
+    <div class="form-btn">
+      <%= f.submit 'アカウント登録', class: "btn-5w" %>
+    </div>
     <% end %>
-    
-  </div><!-- /inner -->
-
+  </div>
 </div>

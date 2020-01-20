@@ -21,7 +21,6 @@
             <% if logged_in? %>
             <li class="menu-item txts"><%= link_to "アイテムを見る", new_item_path %></li>
             <li class="menu-item txts"><%= link_to "4w新規作成", new_detail_path(@item) %></li>
-            <li class="menu-item txts"><%= link_to 'お気に入り', user_path(current_user) %></li>
             <li class="menu-item txts"><%= link_to 'マイページ', user_path(current_user) %></li>
             <li class="menu-item txts"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
             <% else %>
@@ -38,7 +37,6 @@
             <% if logged_in? %>
             <li class="menu-item txts"><%= link_to "アイテムを見る", new_item_path %></li>
             <li class="menu-item txts"><%= link_to "4w新規作成", new_detail_path(@item) %></li>
-            <li class="menu-item txts"><%= link_to 'お気に入り', user_path(current_user) %></li>
             <li class="menu-item txts"><%= link_to 'マイページ' , user_path(current_user) %></li>
             <li class="menu-item txts"><%= link_to 'ログアウト', logout_path, method: :delete %></li>
             <% else %>

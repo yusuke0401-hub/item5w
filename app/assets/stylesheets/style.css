@@ -1,21 +1,4 @@
 @charset "UTF-8";
-/* =====================================
-    1. リセットCSS
-    2. mixin
-    3. 独自基本設定CSS
-    4. ライブラリ用CSS
-    5. 基本設定
-    6. コンテンツスタイル
-===================================== */
-/* 1. リセットCSS
-===================================== */
-/*
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com
-Twitter: @rich_clark
-*/
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -111,11 +94,7 @@ input, select {
   vertical-align: middle;
 }
 
-/* 2. mixin
-===================================== */
 /*  clearfix
-===================================== */
-/* 3. 独自基本設定CSS
 ===================================== */
 /*  colors
 ===================================== */
@@ -193,22 +172,18 @@ input, select {
   }
 }
 
-/* 4. ライブラリ用CSS
-===================================== */
-/* 5. 基本設定
-===================================== */
 * {
   box-sizing: border-box;
 }
 
 html {
   /*
-        ブラウザの標準フォントサイズは基本16pxなので
-        16pxの62.5%は10pxになる為、font-sizeをremで指定しやすくなる。
-        （1.2rem = 12px）
-        px指定にしてしまうとブラウザ側の設定でフォントサイズ拡大しても効かなくなるので
-        ユーザビリティ的にあまりよろしくない。
-     */
+      ブラウザの標準フォントサイズは基本16pxなので
+      16pxの62.5%は10pxになる為、font-sizeをremで指定しやすくなる。
+      （1.2rem = 12px）
+      px指定にしてしまうとブラウザ側の設定でフォントサイズ拡大しても効かなくなるので
+      ユーザビリティ的にあまりよろしくない。
+    */
   font-size: 62.5%;
 }
 
@@ -222,7 +197,7 @@ body {
   font-weight: 300;
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: rgba(255, 228, 196, 0.7);
+  background-color: rgba(220, 220, 220, 0.7);
 }
 
 a {
@@ -245,12 +220,10 @@ li {
   }
 }
 
-/* 6. コンテンツスタイル
-===================================== */
 /* header
 ---------------------------- */
 #header {
-  background-color: #ffe4c4;
+  background-color: #DCDCDC;
 }
 
 #header > .inner {
@@ -428,64 +401,6 @@ li {
   margin: 10px auto;
 }
 
-/* btn
----------------------------- */
-.btn-5w {
-  display: inline-block;
-  padding: 10px 40px;
-  font-size: 2rem;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 4px;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.btn-5w:hover {
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.fav-btn {
-  display: inline-block;
-  margin: 10px 0;
-  padding: 5px 10px;
-  font-size: 1.5rem;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 4px;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.fav-btn:hover {
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.detail-btn {
-  display: inline-block;
-  margin: 10px 0;
-  padding: 5px 10px;
-  font-size: 1.5rem;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 4px;
-  background-color: #fff;
-  cursor: pointer;
-}
-
-.detail-btn:hover {
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.img-btn {
-  margin: 10px;
-}
-
-/* /btn
----------------------------- */
 @media (max-width: 680px) {
   .signup-ttl {
     font-size: 3rem;
@@ -539,7 +454,19 @@ li {
 }
 
 .form-item textarea {
-  width: 100px;
+  display: inline-block;
+  font-size: 2rem;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.form-item textarea:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .form-item input[type="submit"] {
@@ -583,14 +510,6 @@ li {
 
 /* /item-search-form
 ---------------------------- */
-/* edit-detail-form
----------------------------- */
-/* /edit-detail-form
----------------------------- */
-/* 4w-form
----------------------------- */
-/* /4w-form
----------------------------- */
 /* search-result
 ---------------------------- */
 .search-result > .inner {
@@ -627,7 +546,7 @@ li {
 }
 
 .item-name {
-  margin-top: 10px;
+  margin: 10px;
 }
 
 .search-result-btns {
@@ -666,7 +585,7 @@ li {
   padding: 20px 10px;
   border: 1px solid #000;
   border-radius: 10px;
-  background-color: rgba(255, 228, 196, 0.5);
+  background-color: rgba(220, 220, 220, 0.5);
 }
 
 .fav > .inner {
@@ -691,7 +610,7 @@ li {
   padding: 20px 10px;
   border: 1px solid #000;
   border-radius: 10px;
-  background-color: rgba(255, 228, 196, 0.8);
+  background-color: rgba(220, 220, 220, 0.8);
 }
 
 .detail-item {
@@ -753,13 +672,17 @@ li {
   margin: 10px 0;
 }
 
+.user-img {
+  margin: 50px 0;
+}
+
 /* /user
 ---------------------------- */
 /* footer
 ---------------------------- */
 #footer {
   margin-top: auto;
-  background-color: #ffe4c4;
+  background-color: #DCDCDC;
   text-align: center;
 }
 
@@ -823,6 +746,64 @@ li {
 }
 
 /* /alert
+---------------------------- */
+/* btn
+---------------------------- */
+.btn-5w {
+  display: inline-block;
+  padding: 10px 40px;
+  font-size: 2rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn-5w:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.fav-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.fav-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.detail-btn {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.detail-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.img-btn {
+  margin: 10px;
+}
+
+/* /btn
 ---------------------------- */
 /* bootstrap
 ---------------------------- */

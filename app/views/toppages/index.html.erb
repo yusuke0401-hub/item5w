@@ -4,6 +4,7 @@
   <div class="inner">
     <h1 class="signup-ttl">Item5wへ<br class="brsp">ようこそ</h1>
     
+    <% unless logged_in? %>
     <p class="signup-txt txtm">
       Itme5wとは?<br>
       あなたはつい衝動買いしてしまうことはありませんか？<br>
@@ -11,7 +12,6 @@
       What(何),When(いつ)、Where(どこで)、Who（誰が）、Why（なぜ）<br>
       の5Wの詳細をつけて、本当に欲しい商品を見つけよう！
     </p>
-    <% unless logged_in? %>
     
     <div class="signup-btn">
       <%= link_to '新規アカウント登録',signup_path, class: 'btn-5w' %>

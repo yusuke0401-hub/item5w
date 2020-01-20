@@ -1,9 +1,7 @@
 <% if details %>
 <% details.each do |detail| %>
-
 <div class="detail-4w">
   <p class="detail-item-ttl txtm">詳細番号 <%= detail.id %></p>
-  
   <% unless detail.purchase_date.empty? %>
   <div class="detail-item when-item">
     <p class="detail-item-tag">When</p>
@@ -12,7 +10,6 @@
     </div>
   </div>
   <% end %>
-  
   <% unless detail.place.empty? %>
   <div class="detail-item where-item">
     <p class="detail-item-tag">Where</p>
@@ -21,8 +18,6 @@
     </div>
   </div>
   <% end %>
-  
-  
   <% unless detail.person.empty? %>
   <div class="detail-item who-item">
     <p class="detail-item-tag">Who</p>
@@ -31,8 +26,6 @@
     </div>
   </div>
   <% end %>
-  
-  
   <% unless detail.reason.empty? %>  
   <div class="detail-item why-item">
     <p class="detail-item-tag">Why</p>
@@ -41,19 +34,14 @@
     </div>
   </div>  
   <% end %>
-  
   <div class="detail-btns">
     <div class="form-btn">
       <%= link_to "4w編集",  edit_detail_path(detail), class: "btn-5w" %>
     </div>
-    
     <div class="form-btn">
       <%= link_to "4w削除", detail_path(detail.id), method: :delete, class: "btn-5w" %>
     </div>
   </div>
 </div>
-  
-
-
 <% end %>
 <% end %>
