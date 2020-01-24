@@ -48,6 +48,8 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
+  adapter: postgresql
+  encoding: unicode
   <<: *default
   database: item5w_production
   username: item5w
